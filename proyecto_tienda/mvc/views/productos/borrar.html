@@ -1,0 +1,30 @@
+$def with (result)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserta los productos</title>
+    <script src="/static/prueba.js"></script>
+</head>
+
+<body>
+    <h1>Eliminar los productos</h1>
+    <form method="POST" id="formulario">
+        <label>SKU: </label>
+        <input type="text" id="sku" name="sku" value= $result[0] required readonly>
+        <br>
+        <label>Nombre del producto: </label>
+        <input type="text" id="nombre" name="nombre" value=$result[1] required readonly>
+        <br>
+        <label>Unidad: </label>
+        <input type="text" id="unidad" name="unidad" value=$result[2] required readonly>
+        <br>
+        <input type="submit" value="Guardar">
+    </form>
+    
+    <a href="/productos"><button>Regresar</button></a>
+    
+</body>
+</html>
