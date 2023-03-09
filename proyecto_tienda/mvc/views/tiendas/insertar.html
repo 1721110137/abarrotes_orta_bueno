@@ -1,0 +1,27 @@
+$def with (regresar)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresa los datos</title>
+    <script src="/static/prueba.js"></script>
+</head>
+
+<body>
+    <h1>Inserta los productos</h1>
+    <form method="POST" id="formulario">
+        <label>Id_tienda: </label>
+        <input type="text" id="id_tienda" name="id_tienda" required>
+        <br>
+        <label>Nombre de la tienda: </label>
+        <input type="text" id="nombre" name="nombre" required>
+        <br>
+        <input type="submit" value="Guardar">
+    </form>
+    
+    <a href=$regresar><button>Regresar</button></a>
+    
+</body>
+</html>
