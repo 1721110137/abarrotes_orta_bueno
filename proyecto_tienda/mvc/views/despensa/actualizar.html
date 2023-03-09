@@ -1,1 +1,33 @@
+$def with (result)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar despensa</title>
+    <script src="/static/prueba.js"></script>
+</head>
 
+<body>
+    <h1>Actualizar Despensa</h1>
+    <form method="POST" id="formulario">
+        <label>SKU: </label>
+        <input type="text" id="sku" name="sku" value= $result[0] required>
+        <br>
+        <label>Precio: </label>
+        <input type="text" id="precio" name="precio" value= $result[1] required>
+        <br>
+        <label>Fecha: </label>
+        <input type="text" id="fecha" name="fecha" value= $result[2] required>
+        <br>
+        <label>id_tienda: </label>
+        <input type="text" id="id_tienda" name="id_tienda" value= $result[3] required>
+        <br>
+        <input type="submit" value="Guardar">
+    </form>
+    
+    <a href="/despensa"><button>Regresar</button></a>
+    
+</body>
+</html>
