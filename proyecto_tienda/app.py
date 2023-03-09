@@ -11,6 +11,12 @@ urls = (
     '/editar_despensa/(\d+)', 'mvc.controllers.despensa.editar_despensa.editar_despensa',
     '/eliminar_despensa/(\d+)', 'mvc.controllers.despensa.eliminar_despensa.eliminar_despensa',
     
+     '/tiendas', 'mvc.controllers.tiendas.ver_tienda.mostrar_tienda',
+    '/agregar_tienda', 'mvc.controllers.tiendas.insertar_tienda.agregar_tienda',
+    '/eliminar_tienda/(\d+)', 'mvc.controllers.tiendas.eliminar_tienda.eliminar_tienda',
+    '/editar_tienda/(\d+)', 'mvc.controllers.tiendas.editar_tienda.editar_tienda',
+    
+    
 )
 app = web.application(urls, globals()) #aplicacion web
 
