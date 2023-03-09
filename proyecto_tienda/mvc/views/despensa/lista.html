@@ -1,1 +1,44 @@
+$def with (result,agregar)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/dis.css" rel="stylesheet" type="text/css">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Despensa</h1>
+    <table>
+        <thead>
+            <th style="border: 1px solid black;">SKU
+            </th>
+            <th style="border: 1px solid black;">Precio
+            </th>
+            <th style="border: 1px solid black;">Fecha
+            </th>
+            <th style="border: 1px solid black;">id_tienda
+            </th>
+            <th style="border: 1px solid black;">Editar
+            </th>
+            <th style="border: 1px solid black;">Eliminar
+            </th>
+        </thead>
+        <tbody>
+        $for x,y,z,a in result:
+                <tr>
+                    <td style="text-align: center; background-color: salmon; border: 1px solid black;">$x</td>
+                    <td style="text-align: center; background-color: pink; border: 1px solid black;">$y</td>
+                    <td style="text-align: center; background-color: pink; border: 1px solid black;">$z</td>
+                    <td style="text-align: center; background-color: pink; border: 1px solid black;">$a</td>
+                    <td style="text-align: center; background-color: pink; border: 1px solid black;"><a href="editar_despensa/$x">Editar</a></td>
+                    <td style="text-align: center; background-color: pink; border: 1px solid black;"><a href="eliminar_despensa/$x">Eliminar</a></td>
+                </tr>
+        </tbody>
 
+    </table>
+    <a href= $agregar><button>Agregar</button></a>
+    
+</body>
+</html>
